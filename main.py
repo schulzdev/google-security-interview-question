@@ -16,11 +16,19 @@ given_days = 28
 
 
 def get_days_without(sched, amount_days):
+    """[Gets the days without a security guard around the Google building.]
+
+    Args:
+        sched ([Array]): [An Array of the schedule of all the security guards]
+        amount_days ([Number]): [The amount of days in a month]
+
+    Returns:
+        [Array]: [The List of days without a security guard]
+    """
     days = []
     days_with_sec = []
     for i in range(1, amount_days + 1):
         days.append(i)
-    # print(days)
     for i in schedule:
         for j in i:
             # print(j)
